@@ -1,17 +1,12 @@
 import React from 'react';
-import FrontPageLogo from '../assets/logo-feathers.svg';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
-// Hailing from the small township of Motueka in Te Tau Ihu (The South Island) 
-// these taonga are hand crafted from recycled tyre tubing.
+import FrontPageLogo from '../assets/logo-feathers.svg';
+import Kowhaiwhai from '../components/Kowhaiwhai'
 
 const useStyles = makeStyles((theme) => ({
-  link: {
-    textDecoration: "none",
-    margin: theme.spacing(1)
-  },
   page:{
     height: "72vh",
     display: "flex",
@@ -49,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function App() {
+export default function FrontPage() {
   const classes = useStyles();
 
   return (
@@ -64,7 +59,7 @@ export default function App() {
           <Typography className={classes.pageSubtitle}>MOTUEKA NZ</Typography>
         </Grid>
       </Grid>
-      <div className={classes.kowhaiwhai} />
+      <Kowhaiwhai height="20vh" />
     </Grid>
   );
 }
